@@ -1,0 +1,25 @@
+import { UserInterface } from 'interfaces/user';
+import { SalesRepresentativeInterface } from 'interfaces/sales-representative';
+import { OrganizationInterface } from 'interfaces/organization';
+import { GetQueryInterface } from 'interfaces';
+
+export interface CustomerInterface {
+  id?: string;
+  user_id: string;
+  sales_representative_id: string;
+  organization_id: string;
+  created_at?: any;
+  updated_at?: any;
+
+  user?: UserInterface;
+  sales_representative?: SalesRepresentativeInterface;
+  organization?: OrganizationInterface;
+  _count?: {};
+}
+
+export interface CustomerGetQueryInterface extends GetQueryInterface {
+  id?: string;
+  user_id?: string;
+  sales_representative_id?: string;
+  organization_id?: string;
+}
